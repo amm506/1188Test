@@ -1,5 +1,5 @@
-.launches
-.settings
-targetConfigs
+.launches/
+.settings/
+targetConfigs/
 
 *.cmd
