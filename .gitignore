@@ -1,10 +1,10 @@
-Debug/
-.launches/
-.settings/
-targetConfigs/
-.ccsproject
-.cproject
-.project
+#Debug/
+#.launches/
+#.settings/
+#targetConfigs/
+#.ccsproject
+#.cproject
+#.project
 
 
-*.cmd
+#*.cmd
