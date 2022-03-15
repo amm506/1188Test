@@ -67,6 +67,7 @@ int main(void){
   ColorLED_Init();
   RedLED_Init();
   //Added comment
+  //Another comment
   SysTick_Init_Ints(6000000,2);
   GREENOUT = 0;
   EnableInterrupts();
