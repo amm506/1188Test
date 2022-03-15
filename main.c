@@ -1,9 +1,9 @@
 #include "msp.h"
-#include "../TestGitRepo/SharedIncFiles/clock.h"
-#include "../TestGitRepo/SharedIncFiles/LaunchPad.h"
-#include "../TestGitRepo/SharedIncFiles/Texas.h"
-#include "../TestGitRepo/SharedIncFiles/SysTick.h"
-#include "../TestGitRepo/SharedIncFiles/CortexM.h"
+#include "../GitHubAnotherTest/SharedIncFiles/clock.h"
+#include "../GitHubAnotherTest/SharedIncFiles/LaunchPad.h"
+#include "../GitHubAnotherTest/SharedIncFiles/Texas.h"
+#include "../GitHubAnotherTest/SharedIncFiles/SysTickInts.h"
+#include "../GitHubAnotherTest/SharedIncFiles/CortexM.h"
 
 /**
  * main.c
@@ -56,7 +56,7 @@ void SysTick_Wait1us(uint32_t delay){
 void SysTick_Handler(void) {
     if(SW1IN||SW2IN){ // Single Red on if either is pressed
           REDLED=1;
-          SysTick_Wait1us(1000);
+          Clock_Delay1ms(100);
           REDLED=0;
         }
 }
@@ -66,7 +66,7 @@ int main(void){
   Switch_Init();
   ColorLED_Init();
   RedLED_Init();
-  SysTick_Init();
+  SysTick_Init_Ints(6000000,2);
   GREENOUT = 0;
   EnableInterrupts();
   while(1){
